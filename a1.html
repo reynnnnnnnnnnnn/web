@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Anuitas dan Bunga</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="number"], select, input[type="button"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+    input[type="button"] {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    input[type="button"]:hover {
+      background-color: #45a049;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #e8f4e8;
+      border: 1px solid #c6e6c6;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Kalkulator Anuitas dan Bunga</h1>
+    
+    <!-- Pilihan Jenis Perhitungan -->
+    <div class="form-group">
+      <label for="calculationType">Pilih Jenis Perhitungan:</label>
+      <select id="calculationType" onchange="showInputs()">
+        <option value="">Pilih...</option>
+        <option value="simpleInterest">Bunga Tunggal</option>
+        <option value="compoundInterest">Bunga Majemuk</option>
+        <option value="annuity">Anuitas</option>
+      </select>
+    </div>
+
+    <!-- Input Form untuk Semua Pilihan -->
+    <div id="inputs"></div>
+
+    <!-- Tombol Hitung -->
+    <div class="form-group">
+      <input type="button" value="Hitung" onclick="calculate()">
+    </div>
+
+    <!-- Hasil Perhitungan -->
+    <div class="result" id="result"></div>
+  </div>
+
+  <script src="a1.js"></script>
+</body>
+</html>
